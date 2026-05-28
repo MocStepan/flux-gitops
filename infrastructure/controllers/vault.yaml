@@ -26,7 +26,7 @@ spec:
   releaseName: vault
   chart:
     spec:
-      chart: hashicorp/vault
+      chart: vault
       version: 0.32.0
       sourceRef:
         name: vault-repository

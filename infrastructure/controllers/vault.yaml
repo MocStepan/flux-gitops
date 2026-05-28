@@ -29,7 +29,7 @@ spec:
       chart: hashicorp/vault
       version: 0.32.0
       sourceRef:
-        name: vault-system
+        name: vault-repository
         kind: HelmRepository
         namespace: flux-system
   values:

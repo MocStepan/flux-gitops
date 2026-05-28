@@ -33,19 +33,20 @@ spec:
         kind: HelmRepository
         namespace: flux-system
   values:
-    ingress:
-      enabled: true
-      ingressClassName: traefik
-      hosts:
-        - host: vault.moc.actis.cz
-          paths: []
-      # TODO: After cert-manager is added
-      # tls:
-      #   - secretName: vault-system-tls
-      #     hosts:
-      #       - vault.moc.actis.cz
-    dataStorage:
-      size: 2Gi
-      storageClass: longhorn
+    server:
+      ingress:
+        enabled: true
+        ingressClassName: traefik
+        hosts:
+          - host: vault.moc.actis.cz
+            paths: ["/"]
+        # TODO: After cert-manager is added
+        # tls:
+        #   - secretName: vault-system-tls
+        #     hosts:
+        #       - vault.moc.actis.cz
+      dataStorage:
+        size: 2Gi
+        storageClass: longhorn
     ui:
       enabled: true
